@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
+//adding a comment
 @SpringBootApplication
 @ComponentScan("com.assessment")
 public class Application {
