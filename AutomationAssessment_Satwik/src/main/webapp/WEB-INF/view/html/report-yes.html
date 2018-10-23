@@ -65,19 +65,23 @@
                  	</h3>
                 </div>
               </section>
-
+               <br/> <br/>
+               <section>              	
+                	<h5 class="report-header report-question" th:text="#{notifiy.message}"></h5>
+                	<h5 class="report-header report-question" th:text="#{contactnum.message}"></h5>
+              </section>
               <hr />
 
               <section>
                 <h3 class="header-title-report pt-3 pb-3" th:text="#{report.summary}"></h3>
                 <div class="container">
   					<div class="row">
-   						<div class="col-sm">
-   							<span id="yellow-box"></span> <span class="description-box">Progressive</span>   						
-   						</div>
-   						<div class="col-sm">
+  					     <div class="col-sm">
       						<span id="green-box"></span> <span class="description-box">Optimized</span>
     					</div>
+   						<div class="col-sm">
+   							<span id="yellow-box"></span> <span class="description-box">Progressive</span>   						
+   						</div>   						
    						<div class="col-sm">
      					 	<span id="red-box"></span> <span class="description-box">AD Hoc</span>
     					</div>
