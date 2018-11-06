@@ -4,7 +4,7 @@ import java.util.List;
 
 import lombok.Data;
 
-
+@Data
 public class TotalInformation {
 
 	private PersonalDetails personalDetails;

@@ -16,6 +16,8 @@ import com.assessment.service.AutomationTestAssessmentService;
 import com.assessment.service.AutomationTestMessageService;
 import com.assessment.service.ConstructQuestionnaireService;
 import com.assessment.service.EmailNotificationService;
+import com.google.gson.GsonBuilder;
+import com.test.Main;
 
 @RestController
 public class AutomationTestAssessmentController {
@@ -31,6 +33,7 @@ public class AutomationTestAssessmentController {
 	
 	@Autowired
 	private EmailNotificationService emailService;
+	
 	
 	@RequestMapping(value = "/questions-1a", method = RequestMethod.GET)
 	public ModelAndView navigationQuestions1a(Model model, ModelAndView view, HttpSession httpSession) {
@@ -266,11 +269,24 @@ public class AutomationTestAssessmentController {
 		automationService.setQuestion_10a(httpSession, httpRequest, totalInformation);
 		view.setViewName("html/report-yes");
 		messageService.setReportMessage(totalInformation);
+		
 		model.addAttribute("totalInformation", totalInformation);
 		System.out.println("After 10th questions : ");
 		System.out.println(totalInformation.toString());
 		// Adding the code for sending the email with pdf attached
+	
+		try {
+			String out = new GsonBuilder().setPrettyPrinting().create().toJson(messageService);
+			System.out.println("Message Service" + out);
+
+			Main.generatePDFFromHTML(totalInformation,messageService);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		emailService.sendEmailNotification(totalInformation.getPersonalDetails());
+		
 		//sendEmail();
 		return view;
 	}
