@@ -72,7 +72,7 @@
                 <h3 class="header-title-report pt-3 pb-3" th:text="#{report.summary}"></h3>
                 <h3 class="report-header pt-4" th:text="#{report.category.tool}"></h3>
                 <div th:each="message : ${totalInformation.messages}">
-                	<div th:if="${#strings.containsIgnoreCase(message.category, 'tool')}" class="pt-2">
+                	<div th:if="${#strings.containsIgnoreCase(message.category, 'Tool')}" class="pt-2">
                   		<div th:class="${message.color}">
                     		<h5 class="py-3 px-3 report-content">
                       			<output th:text="${message.message}"></output>

@@ -10,15 +10,18 @@ import com.assessment.model.TotalInformation;
 import com.assessment.util.AppConstants;
 
 @Service
-public class ManualTestMessageService {
+public class ManualTestMessageService implements MessageService{
 	
 	private TotalInformation totalInformation;
-	private String categoryTools = "Tools";
+	private String categoryTools = "Tool";
 	private String categoryRoi = "ROI";
 	private String categoryResource = "Resource";
 	
 	private String category = null;
 	private List<Message> messages;
+	public List<Message> getMessages(){
+		return messages;
+	}
 	
 	public TotalInformation setReportMessage(TotalInformation totalInfo) {
 		this.totalInformation = totalInfo;

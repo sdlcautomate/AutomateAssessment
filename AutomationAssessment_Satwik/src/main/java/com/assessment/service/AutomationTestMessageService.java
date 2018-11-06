@@ -10,19 +10,22 @@ import com.assessment.model.TotalInformation;
 import com.assessment.util.AppConstants;
 
 @Service
-public class AutomationTestMessageService {
+public class AutomationTestMessageService implements MessageService{
 	
 	private TotalInformation totalInformation;
 	private String answerColorGreen = "green-answer";
 	private String answerColorYellow = "yellow-answer";
 	private String answerColorRed = "red-answer";
-	private String categoryTools = "tools";
+	private String categoryTools = "Tool";
 	private String categoryMethodology = "SDLC Methodology";
 	private String categoryCoverage = "Test Coverage";
 	private String categoryDefect = "Defect Detection";
-	private String category = null;
+	public String category = null;
 	
 	private List<Message> messages;
+	public List<Message> getMessages(){
+		return messages;
+	}
 	
 	public TotalInformation setReportMessage(TotalInformation totalInfo) {
 		this.totalInformation = totalInfo;
