@@ -107,11 +107,12 @@ header {
 }
 
 .report-answer {
-  color: rgb(125, 175, 225) !important;
+  color: darkBlue;
   font-family: 'Open Sans';
   font-size: 1.2rem;
   font-weight: 300;
 }
+
 
 .report-content {
 	font-size: 1.1rem;
@@ -152,28 +153,34 @@ hr {
 #red-box {
 	display: inline-block;
 	border-radius: 6px;
+	border-width: thin;
     background: rgba(236, 52, 37, .5);
     padding: 10px; 
     width: 3px;
     height: 3px; 
+    border-style: solid;
 }
 
 #yellow-box{
 	display: inline-block;
 	border-radius: 6px;
+	border-width: thin;
     background: rgba(255, 254, 85, .5);
     padding: 10px; 
     width: 3px;
     height: 3px; 
+    border-style: solid;
 }
 
 #green-box {
 	display: inline-block;
 	border-radius: 6px;
+	border-width: thin;
     background: rgba(54, 125, 35, .5);
     padding: 10px; 
     width: 3px;
     height: 3px; 
+    border-style: solid;
 }
 
 .description-box {
