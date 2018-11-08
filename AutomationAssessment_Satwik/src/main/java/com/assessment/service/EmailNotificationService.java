@@ -31,9 +31,9 @@ public class EmailNotificationService {
 // Functionality for Sending the email with the pdf attachment
 	public void sendEmailNotification(PersonalDetails userDetails) {
 		// Send Email
-		final String username = "sranjan@sdlcpartners.com";
+		final String username = "sdlcpartners7@gmail.com";
 
-		final String password = "De@daccount7899";
+		final String password = "sdlcpartners@2018";
 
 		Properties props = new Properties();
 
@@ -41,7 +41,7 @@ public class EmailNotificationService {
 
 		props.put("mail.smtp.starttls.enable", "true");
 
-		props.put("mail.smtp.host", "smtp.office365.com");
+		props.put("mail.smtp.host", "smtp.gmail.com");
 
 		props.put("mail.smtp.port", "587");
 
@@ -60,7 +60,7 @@ public class EmailNotificationService {
 		
 		Message message = new MimeMessage(session);
 		try {
-			message.setFrom(new InternetAddress("sranjan@sdlcpartners.com"));
+			message.setFrom(new InternetAddress("sdlcpartners7@gmail.com"));
 
 			message.setRecipients(Message.RecipientType.TO,
 
@@ -69,11 +69,13 @@ public class EmailNotificationService {
 			message.setSubject("Message from SDLC");
 			BodyPart messageBodyPart = new MimeBodyPart();
 
-			messageBodyPart.setText("Hi," + "This is a Test mail from Saurabh sdlc partners official email!");
+			messageBodyPart.setText("Hi," + "This is a Test mail!");
 			Multipart multipart = new MimeMultipart();
 			multipart.addBodyPart(messageBodyPart);
 			messageBodyPart = new MimeBodyPart();
-			File file = new File("sample.pdf");
+			//File file = new File("html.pdf");
+			//ClassLoader classLoader = getClass().getClassLoader();
+			java.io.File file = new java.io.File("src/main/html.pdf");
 			String filename = file.getAbsolutePath();
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));

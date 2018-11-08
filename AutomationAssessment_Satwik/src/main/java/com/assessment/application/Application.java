@@ -9,7 +9,7 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 @SpringBootApplication
 @ComponentScan("com.assessment")
 public class Application {
-	
+	// Comments
 	 // Setting suffix and prefix to identify html pages
 	 @Bean 
 	    ServletContextTemplateResolver templateResolver(){ 
