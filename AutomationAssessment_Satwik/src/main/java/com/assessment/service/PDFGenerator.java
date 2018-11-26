@@ -130,17 +130,17 @@ public class PDFGenerator {
 		 
 	    
 	    if(type==AUTOMATED) {
-	    	 PdfPTable table = new PdfPTable(18);
+	    	 PdfPTable table = new PdfPTable(30);
 		 	    table.setWidthPercentage(100);
 		 	    table.getDefaultCell().setBorder(PdfPCell.NO_BORDER);
 		 	   
-		 	   addColorCell(table, new BaseColor(0,255, 157));
+		 	   addColorCell(table, new BaseColor(129,172, 120));
 		 	   addCell(table, new Chunk("Optimized"));
 
 		 	   addColorCell(table, new BaseColor(255,255, 153));
 		 	   addCell(table, new Chunk("Progressive"));
 
-		 	   addColorCell(table, new BaseColor(220,20, 60));
+		 	   addColorCell(table, new BaseColor(218,111, 111));
 		 	   addCell(table, new Chunk("AD Hoc"));
 		 	   
 		 	   document.add(table);		 	
@@ -188,9 +188,9 @@ public class PDFGenerator {
 				if(type==AUTOMATED) {
 					BaseColor color =  null;
 					switch(q.getColor()) {	 
-						case  "green-answer" : color = new BaseColor(0,255, 157); break;
+						case  "green-answer" : color = new BaseColor(129,172, 120); break;
 						case  "yellow-answer" : color = new BaseColor(255,255, 153); break; 
-						case  "red-answer" : color = new BaseColor(220,20, 60); break;
+						case  "red-answer" : color = new BaseColor(218,111, 111); break;
 						default :color =  BaseColor.LIGHT_GRAY;
 					}
 					cell.setBackgroundColor(color);				
@@ -226,7 +226,7 @@ public class PDFGenerator {
 		PdfPCell cell = new PdfPCell();
 		cell.setBorder(PdfPCell.NO_BORDER);
 		cell.addElement(chunk);
-		cell.setColspan(5);
+		cell.setColspan(9);
 		table.addCell(cell);
 	}
 	

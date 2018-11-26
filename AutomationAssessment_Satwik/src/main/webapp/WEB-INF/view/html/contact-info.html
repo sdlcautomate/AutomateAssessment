@@ -60,7 +60,7 @@
                       <label for="inputMDEx" th:text="#{label.email}"></label>
                   </div>
                   <div class="md-form form-sm pt-2 form-group ">
-                      <input type="tel" id="phone" class="form-control" required="true" onkeypress="return numberPressed(event);"  th:field="${personaldetails.phoneNumber}"/>
+                      <input type="tel" id="phone" class="form-control" required="true" onkeypress="return numberPressed(event,'phone');"  th:field="${personaldetails.phoneNumber}"/>
                       <label for="inputMDEx" th:text="#{label.phone}"></label>
                   </div>
                   <div class="md-form form-sm pt-2 form-group">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </section>
-
+	
     <!-- Footer -->
       <footer class="page-footer font-small blue-grey lighten-5 mt-4">
 

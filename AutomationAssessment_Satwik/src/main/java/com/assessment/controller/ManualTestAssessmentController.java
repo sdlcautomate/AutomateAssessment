@@ -15,8 +15,8 @@ import com.assessment.model.TotalInformation;
 import com.assessment.service.ConstructQuestionnaireService;
 import com.assessment.service.ManualTestAssessmentService;
 import com.assessment.service.ManualTestMessageService;
+import com.assessment.service.PDFGenerator;
 import com.google.gson.GsonBuilder;
-import com.test.Main;
 
 @RestController
 public class ManualTestAssessmentController {
@@ -280,7 +280,7 @@ public class ManualTestAssessmentController {
 		try {
 			String out = new GsonBuilder().setPrettyPrinting().create().toJson(messageService);
 			System.out.println("Message Service" + out);
-		Main.generatePDFFromHTML(totalInformation,messageService);
+		PDFGenerator.generatePDFFromHTML(totalInformation,messageService);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
