@@ -43,18 +43,19 @@
         <div class="overlay-one">
           <div class="row d-flex ml-4 text-questions-content-white-background animated fadeIn pl-1">
             <div class="col-sm-10 offset-sm-2 col-md-10 offset-md-2 col-lg-10 offset-lg-2 opening-content">
+              
               <h3 class="question-header">
-                 <output th:text="${totalInformation.questions[0].question}" ></output>
+                <output th:text="${totalInformation.questions[0].question}" ></output>
               </h3>
                 <form method="post"  th:object="${totalInformation}"  th:action="@{/questions-2b}">
                   
-                  <div class="pt-3 checkbox-label-text question-content">
+                   <div class="pt-3 checkbox-label-text question-content">
                   	<div th:attr="at1=${totalInformation.questions[0].option1}? true : ${totalInformation.questions[0].option1}"></div>
                   	<div th:attr="at2=${totalInformation.questions[0].option2}? true : ${totalInformation.questions[0].option2}"></div>
                   	<div th:attr="at3=${totalInformation.questions[0].option3}? true : ${totalInformation.questions[0].option3}"></div>
                   	<div th:attr="at4=${totalInformation.questions[0].option4}? true : ${totalInformation.questions[0].option4}"></div>
                   
-                  	
+              
                     <div class="form-check pl-0">
                     	<input type="checkbox" name="checkbox100b" th:checked="${totalInformation.questions[0].option1}" class="filled-in form-check-input" id="checkbox100b" />
                         <label class="form-check-label" th:text="${totalInformation.questions[0].answerOptions[0]}"  for="checkbox100b"></label>
@@ -76,10 +77,11 @@
                     </div>
                     
                     <div class="md-form answer-divs p3a-other-a">
+
                         <input type="text" name="other1" id="form1b" oninput="enableDisableSubmit()" onchange="enableDisableSubmit" th:field="${totalInformation.questions[0].other1}" class="form-control" />
                         <label for="form1b">Please specify</label>
                     </div>
-                </div>
+             </div>    
                    
                   <div class="bt-prev">
                    <!--  <a href="questions-2b.html"> -->

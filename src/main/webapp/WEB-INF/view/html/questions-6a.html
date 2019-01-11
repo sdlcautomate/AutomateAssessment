@@ -69,8 +69,10 @@
                         <label class="form-check-label" th:text="${totalInformation.questions[5].answerOptions[4]}" for="checkbox604a"></label>
                     </div>
                     <div class="md-form answer-divs p4a-other-a">
+
                         <input type="text" name="other1" id="form6aa" oninput="enableDisableSubmit()" onchange="enableDisableSubmit" th:field="${totalInformation.questions[5].other1}"  class="form-control" />
-                        <label for="form6aa">Please specify</label>
+
+                       <label for="form6aa">Please specify</label>
                     </div>
                   </div>
                   <div class="bt-prev">
@@ -78,7 +80,7 @@
                   </div>
                   <div class="bt-prev">
                   	<button type="submit" name="submit" id="submit-button" value="Submit" class="btn btn-primary btn-rounded">Next Question</button>
-                  </div>
+                     </div>
                 </form>
                 
               <div class="d-lg-none pt-4">

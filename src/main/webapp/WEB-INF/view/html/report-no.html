@@ -62,9 +62,7 @@
                 	<h3 class="report-header pt-2 "> 
                   		<output th:text="${question.question}" ></output></h3>
                   	<h3  class="report-answer pt-2 answers"> Answer: 
-                  	<span th:each="answer : ${question.answer}" class="answerClass">
-                  		<output th:text="${answer}"></output>
-                 	</span>
+                  	<span th:each="answer : ${question.answer}" class="answerClass"><output th:text="${answer}"></output></span>
                  	</h3>
                 </div>
               </section>

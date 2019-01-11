@@ -100,7 +100,7 @@ public class PDFGenerator {
 	    	p.add(q.getQuestion());
 	    	p.add(Chunk.NEWLINE);
 	    	p.add(new Chunk("Answer : ",new Font(FontFamily.TIMES_ROMAN,13, Font.NORMAL)));
-	    	String collect = q.getAnswer().stream().collect(Collectors.joining(","));
+	    	String collect = q.getAnswer().stream().collect(Collectors.joining(", "));
 	    	
 	    	Font fontAnswers = new Font(FontFamily.TIMES_ROMAN,13, Font.NORMAL, new BaseColor(0, 0, 139));
 	    	p.add(new Chunk(collect,fontAnswers));
@@ -115,7 +115,7 @@ public class PDFGenerator {
 		mainCell.addElement(Chunk.NEWLINE);
 		
 		mainCell.addElement(new Chunk("Thank you for completing the survey. An SDLC Partners Representative will be in contact with you soon to discuss the summary of assessment report."));
-		mainCell.addElement(new Chunk("Should you need support prior to then, please contact us at xxx-xxx-xxxx.")); 
+		mainCell.addElement(new Chunk("If you need support prior to then, please contact us at xxx-xxx-xxxx.")); 
 		
 		mainCell.addElement(Chunk.NEWLINE);
 	    

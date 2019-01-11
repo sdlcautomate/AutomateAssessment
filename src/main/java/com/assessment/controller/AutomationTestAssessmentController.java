@@ -54,6 +54,8 @@ public class AutomationTestAssessmentController {
 		totalInformation = questionnaireService.getAutomationTestQuestionnaireDetails(totalInformation);
 		view.setViewName("html/questions-1a");
 		model.addAttribute("totalInformation", totalInformation);
+		totalInformation.setAutomated(true);
+		httpSession.setAttribute("FIRST", null);
 
 		System.out.println("After 1st questions : POST ");
 		System.out.println(totalInformation.toString());

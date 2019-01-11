@@ -7,9 +7,10 @@ import lombok.Data;
 
 public class Questions {
 
-	public Questions () {
+	/*public Questions () {
 		System.out.println("XXX Questions ");
-	}
+	} */
+	
 	private String question;
 	private List<String> answer;
 	private List<String> answerOptions;

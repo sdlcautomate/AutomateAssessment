@@ -69,17 +69,19 @@
                           <label class="form-check-label" th:text="${totalInformation.questions[3].answerOptions[4]}" for="checkbox404b">Other</label>
                       </div>
                       <div class="md-form answer-divs p4b-other-a">
+
                           <input type="text" id="form4b" oninput="enableDisableSubmit()" onchange="enableDisableSubmit" th:field="${totalInformation.questions[3].other1}" class="form-control" />
-                          <label for="form4b">Please specify</label>
+                         <label for="form4b">Please specify</label>
                       </div>       
                   </div>
                   <div class="bt-prev">
                     <a href="questions-3b.html" class="btn btn-primary btn-rounded">Previous Question</a>
                   </div>
                   <div class="bt-prev">
+
                  <!--   <a href="questions-5b.html">  --> 
                     <button type="submit" name="submit" value="Submit" id="submit-button" class="btn btn-primary btn-rounded">Next Question</button>
-                  </div>
+                 </div>
                 </form>
                 
               <div class="d-lg-none pt-4">
