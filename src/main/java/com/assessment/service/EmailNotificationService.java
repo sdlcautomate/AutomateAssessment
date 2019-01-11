@@ -69,7 +69,7 @@ public class EmailNotificationService {
 			message.setSubject("Test Automation Sales Tool");
 			BodyPart messageBodyPart = new MimeBodyPart();
 
-			messageBodyPart.setText("This is a Test email");
+			messageBodyPart.setText("Dear Customer," + "Greetings from SDLC Partners.");
 			Multipart multipart = new MimeMultipart();
 			multipart.addBodyPart(messageBodyPart);
 			messageBodyPart = new MimeBodyPart();
@@ -81,11 +81,10 @@ public class EmailNotificationService {
 			messageBodyPart.setDataHandler(new DataHandler(source));
 			messageBodyPart.setFileName("AutomationReport.pdf");
 			multipart.addBodyPart(messageBodyPart);
-			messageBodyPart.setText("Signature");
 			message.setContent(multipart);
 
 			Transport.send(message);
-			//file.delete();
+			file.delete();
 			
 			System.out.println("Mail sent succesfully!");
 
