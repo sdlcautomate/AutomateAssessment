@@ -66,10 +66,10 @@ public class EmailNotificationService {
 
 					InternetAddress.parse(userDetails.getEmail()));
 
-			message.setSubject("Message from SDLC");
+			message.setSubject("Test Automation Sales Tool");
 			BodyPart messageBodyPart = new MimeBodyPart();
 
-			messageBodyPart.setText("Hi," + "This is a Test mail!");
+			messageBodyPart.setText("This is a Test email");
 			Multipart multipart = new MimeMultipart();
 			multipart.addBodyPart(messageBodyPart);
 			messageBodyPart = new MimeBodyPart();
@@ -79,12 +79,13 @@ public class EmailNotificationService {
 			String filename = file.getAbsolutePath();
 			DataSource source = new FileDataSource(filename);
 			messageBodyPart.setDataHandler(new DataHandler(source));
-			messageBodyPart.setFileName(filename);
+			messageBodyPart.setFileName("AutomationReport.pdf");
 			multipart.addBodyPart(messageBodyPart);
+			messageBodyPart.setText("Signature");
 			message.setContent(multipart);
 
 			Transport.send(message);
-			file.delete();
+			//file.delete();
 			
 			System.out.println("Mail sent succesfully!");
 

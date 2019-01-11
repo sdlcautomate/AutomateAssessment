@@ -49,7 +49,7 @@ public class AppConstants {
 	//Paragraph 1 Messages (Tools)
 	public static final String MESSAGE_20 = "Open source tools are typically created as a collaborative effort in which programmers improve upon the code and share the changes within the community, and is usually available at no charge under a license defined by the Open Source Initiative. There are open source tools which can automate anything you see on the screen of your desktop computer running Windows, Mac or some Linux/Unix. Depending on an application you have, a third party add-on may be required. We as a team from SDLC Partners, can help you in decreasing your test coverage using open source tools for automation.";
 	public static final String MESSAGE_21 = "Unified Functional Testing (UFT) is a well-known commercial testing tool for functional testing. It provides functional and regression test automation for software applications and environments and also provides a comprehensive feature set for API, web services, and GUI testing of desktop, web, and mobile applications across platforms.We as a team from SDLC Partners, can help you in building more descriptive programming scripts and can have lower maintenance costs.";
-	public static final String MESSAGE_22 = "Selenium is the most popular open source test automation tool for browser-based applications. It has a large user community to draw support from on the Web. Selenium also support different type of browsers for automation and can be integrated with TestNG to perform Multi Browser Testing.As this tool was mainly designed to automate web application, using it for a desktop or mainframe-based application would need third party software in addition. There would be risks to continuing in this path.Our suggestion would be to consider using a commercial tool. We as a team from SDLC Partners, can help you in decreasing your test coverage which helps in delivering a more defect free product. Also, we can help explore other commercial tools more proficient in automating desktop and mainframe applications as selenium works best with web applications.";
+	public static final String MESSAGE_22 = "Selenium is the most popular open source test automation tool for browser-based applications. It has a large user community to draw support from on the Web. Selenium also support different type of browsers for automation and can be integrated with TestNG to perform Multi Browser Testing. As this tool was mainly designed to automate web application, using it for a desktop or mainframe-based application would need third party software in addition. There would be risks to continuing in this path.Our suggestion would be to consider using a commercial tool. We as a team from SDLC Partners, can help you in decreasing your test coverage which helps in delivering a more defect free product. Also, we can help explore other commercial tools more proficient in automating desktop and mainframe applications as selenium works best with web applications.";
 	public static final String MESSAGE_23 = "Commercial tools give an option of testing non-browser based applications unlike opensource tools. Using them for a Web and Mobile based application is a good path to take for test automation. SDLC have experience in HP UFT, RFT. We will be able to provide resources to build an integration testing framework and infrastructure. Experienced QA automation engineers from a consulting company can build the initial integration test suite and train your QAs on automation test creation and management.";
 	public static final String MESSAGE_24 = "Open source tools are becoming more common and seems cost effective. But Open source tools do not have tech support and data in Mainframe must be well protected. To reach the same level of test coverage as proprietary tools need more experience and making updates to existing scripts would become more complicated. Best approach for Mainframe Automated testing will be Enterprise tools. Many companies follow the same path. Going this direction will make scripts robust, well protected data, reliable tech support and more cost efficiency towards increasing test coverage. Going this route will not only make your test bed more efficient. We as a team from SDLC Partners, can help you in decreasing your test coverage using scripting framework.";
 	public static final String MESSAGE_25 = "Commercial tools give an option of testing non-browser based applications unlike opensource tools.Using them for a desktop and mainframe-based application is a good path to take for test automation. Our suggestion would be to focus on increasing your test coverage. Choosing Enterprise tools for Mainframe test automation gives more reliable tech support and well protected data. SDLC partners has vast experience in HP UFT and IBM Rational Functional Tester when it comes to Mainframe testing. Benefit of these tools are robust scripts, easy maintenance and more test coverage. Open source tools seem cost effective but require more time to build framework and updating scripts, also getting same level of test coverage as enterprise tools do require more experience. Taking this route will bring more confidence, effective and reliable Automation testing to your company. SDLC company will bring you more valuable and reliable Automation testing with its reach resources.";
@@ -115,12 +115,12 @@ public class AppConstants {
 	public static final String QUESTION_10b = "10) What are the skill sets already existing within the team/company?";
 	
 	//Answer options
-	public static final String QUESTION_1a_OPTION_1 = "HP - QTP, UFT, LeannFT";
-	public static final String QUESTION_1a_OPTION_2 = "IBM - RFT";
+	public static final String QUESTION_1a_OPTION_1 = "HP-QTP,UFT,LeannFT";
+	public static final String QUESTION_1a_OPTION_2 = "IBM-RFT";
 	public static final String QUESTION_1a_OPTION_3 = "Selenium";
-	public static final String QUESTION_1a_OPTION_4 = "Microsoft - Coded UI";
+	public static final String QUESTION_1a_OPTION_4 = "Microsoft-Coded UI";
 	public static final String QUESTION_1a_OPTION_5 = "Performance Testing Tool";
-	public static final String QUESTION_1a_OPTION_6 = "Other - Paid";
+	public static final String QUESTION_1a_OPTION_6 = "Other-Paid";
 	//public static final String QUESTION_1a_OPTION_7 = "Other - Open Source";
 	
 	public static final String QUESTION_2a_OPTION_1 = "Descriptive Programming";
@@ -139,7 +139,7 @@ public class AppConstants {
 	
 	public static final String QUESTION_5a_OPTION_1 = "Waterfall";
 	public static final String QUESTION_5a_OPTION_2 = "Agile/Iteration";
-	public static final String QUESTION_5a_OPTION_3 = "DevOps/ CI / CD";
+	public static final String QUESTION_5a_OPTION_3 = "DevOps/CI/CD";
 	public static final String QUESTION_5a_OPTION_4 = "Other";
 	
 	public static final String QUESTION_6a_OPTION_1 = "Biweekly";
@@ -171,7 +171,7 @@ public class AppConstants {
 	
 	public static final String QUESTION_1b_OPTION_1 = "Waterfall";
 	public static final String QUESTION_1b_OPTION_2 = "Agile/Iteration";
-	public static final String QUESTION_1b_OPTION_3 = "DevOps/ CI / CD";
+	public static final String QUESTION_1b_OPTION_3 = "DevOps/CI/CD";
 	public static final String QUESTION_1b_OPTION_4 = "Other";
 	
 	public static final String QUESTION_2b_OPTION_1 = "Functional Testing";
@@ -218,10 +218,10 @@ public class AppConstants {
 	public static final String QUESTION_10b_OPTION_3 = "Both";
 	public static final String QUESTION_10b_OPTION_4 = "None";
 	
-	public static final String HP_QTP_UF_LeannFT = "HP - QTP, UFT, LeannFT";
-	public static final String IBM_RFT = "IBM - RFT";
+	public static final String HP_QTP_UF_LeannFT = "HP-QTP,UFT,LeannFT";
+	public static final String IBM_RFT = "IBM-RFT";
 	public static final String SELENIUM = "Selenium";
-	public static final String MICROSOFT_CODEED_UI ="Microsoft - Coded UI";
+	public static final String MICROSOFT_CODEED_UI ="Microsoft-Coded UI";
 	public static final String PERFORMANCE_TESTNG_TOOL ="Performance Testing Tool";
 	
 	public static final String WATERFALL = "Waterfall";

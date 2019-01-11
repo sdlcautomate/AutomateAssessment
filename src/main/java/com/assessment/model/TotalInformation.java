@@ -10,6 +10,17 @@ public class TotalInformation {
 	public TotalInformation (){
 		System.out.println("TotalInformation Constructor");
 	}
+	private boolean isAutomated = true;
+	public boolean isAutomated() {
+		return isAutomated;
+	}
+
+
+
+
+	public void setAutomated(boolean isAutomated) {
+		this.isAutomated = isAutomated;
+	}
 	private PersonalDetails personalDetails;
 	private List<Questions> questions;
 	private List<Message> messages;

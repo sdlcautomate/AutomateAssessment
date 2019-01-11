@@ -38,10 +38,13 @@ public class ManualTestAssessmentController {
 	public ModelAndView navigationQuestions1b(Model model, ModelAndView view, HttpSession httpSession) {
 		view.setViewName("html/questions-1b");
 		TotalInformation totalInformation = (TotalInformation) httpSession.getAttribute("totalInformation");
-		if(httpSession.getAttribute("FIRST")==null) {
+		/*if((boolean)httpSession.getAttribute("FIRST").equals(obj)) {
 			totalInformation = questionnaireService.getManualTestQuestionnaireDetails(totalInformation);
 			httpSession.setAttribute("FIRST", true);
-		}
+		}*/
+		if(totalInformation.isAutomated())
+			totalInformation = questionnaireService.getManualTestQuestionnaireDetails(totalInformation);
+		totalInformation.setAutomated(false);
 		model.addAttribute("totalInformation", totalInformation);
 		return view;
 	}
@@ -51,6 +54,7 @@ public class ManualTestAssessmentController {
 	
 		System.out.println("Entered into the question number 1");
 		TotalInformation totalInformation = (TotalInformation) httpSession.getAttribute("totalInformation");
+		
 		
 		view.setViewName("html/questions-1b");
 		model.addAttribute("totalInformation", totalInformation);
