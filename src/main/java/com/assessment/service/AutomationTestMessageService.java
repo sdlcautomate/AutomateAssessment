@@ -104,7 +104,9 @@ public class AutomationTestMessageService implements MessageService{
 						}
 					} else if(!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 						if(!developmentCycle.isEmpty() ) {
-							createMessage(AppConstants.MESSAGE_5A, answerColorYellow);
+							//createMessage(AppConstants.MESSAGE_5A, answerColorYellow);
+							// Adding the text APPIUM in Message 5A
+							createMessage(AppConstants.MESSAGE_5A_APPIUM, answerColorYellow);
 						}
 					} 
 				}  else if(!platform.isEmpty() && ( platform.contains(AppConstants.QUESTION_3a_OPTION_1) || platform.contains("MainFrame"))) {
