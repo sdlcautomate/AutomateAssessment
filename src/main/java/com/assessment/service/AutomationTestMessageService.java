@@ -186,6 +186,12 @@ public class AutomationTestMessageService implements MessageService{
 								
 							}
 						}	
+					       // Adding the condition for replacing Message 6C with 6B when Desktop/Thin/Thick - MainFrame AND Web Application - Mobile is selected
+					       else if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
+								if(!developmentCycle.isEmpty() ) {
+									createMessage(AppConstants.MESSAGE_6B, answerColorYellow);
+								}
+							}
 					}
 					
 				   else if(!platform.isEmpty() && ( platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
