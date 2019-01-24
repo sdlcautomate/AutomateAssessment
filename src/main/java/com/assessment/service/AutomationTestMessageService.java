@@ -92,15 +92,27 @@ public class AutomationTestMessageService implements MessageService{
 
 			}else if(!framework.isEmpty() && (framework.contains(AppConstants.QUESTION_2a_OPTION_1) ||
 					framework.contains("Both") ) ) {
+				// Adding a condition for Desktop/Thin/Thick - MainFrame AND Web Application - Mobile and changing the message 6A with 
+				// desktop and mainframe-based/mobile application
+				if(!platform.isEmpty() && ((platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))
+						&&(platform.contains(AppConstants.QUESTION_3a_OPTION_1) || platform.contains("MainFrame")))) {
+					if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
+						if(!developmentCycle.isEmpty() ) {
+							createMessage(AppConstants.MESSAGE_6A_BOTH, answerColorYellow);
+						}
+					}
+				}
 				
-				if(!platform.isEmpty() && ( platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
+			   else if(!platform.isEmpty() && ( platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
 					if(!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
 						if(!developmentCycle.isEmpty() ) {
 							createMessage(AppConstants.MESSAGE_7A, answerColorGreen);
 						}
 					} else if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
 						if(!developmentCycle.isEmpty() ) {
-							createMessage(AppConstants.MESSAGE_6A, answerColorYellow);
+							//createMessage(AppConstants.MESSAGE_6A, answerColorYellow);
+							// Changing the message 6A with 'mobile' text if Web Application - Mobile is selected
+							createMessage(AppConstants.MESSAGE_6A_WEBAPP_MOB, answerColorYellow);
 						}
 					} else if(!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 						if(!developmentCycle.isEmpty() ) {
