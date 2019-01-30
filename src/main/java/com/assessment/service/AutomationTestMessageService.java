@@ -55,7 +55,27 @@ public class AutomationTestMessageService implements MessageService{
 						|| tools.contains(AppConstants.QUESTION_1a_OPTION_4)
 						|| tools.contains(AppConstants.QUESTION_1a_OPTION_5)
 						|| totalInformation.getQuestions().get(0).isOption6())) {
+			
+			//changes for Message 1c/2c
+			
 			if (!framework.isEmpty()
+					&& (framework.contains(AppConstants.QUESTION_2a_OPTION_1)&& framework.contains(AppConstants.QUESTION_2a_OPTION_2))) {
+				
+				if (!platform.isEmpty()
+						&& (platform.contains(AppConstants.QUESTION_3a_OPTION_1) || platform.contains("MainFrame"))) {
+					
+					if (!coverage.isEmpty()
+							&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2)||coverage.contains(AppConstants.QUESTION_4a_OPTION_1)
+									||coverage.contains(AppConstants.QUESTION_4a_OPTION_2)||coverage.contains(AppConstants.QUESTION_4a_OPTION_4))) {
+						
+						if (!developmentCycle.isEmpty()) {
+							createMessage(AppConstants.MESSAGE_1C_BOTH, answerColorRed);
+						}
+					}
+				}						
+			}
+			
+			else if (!framework.isEmpty()
 					&& framework.contains(AppConstants.QUESTION_2a_OPTION_2)) {
 				if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
 					if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
