@@ -148,11 +148,14 @@ public class AutomationTestMessageService implements MessageService{
 						} else if (!coverage.isEmpty()
 								&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
 							if (!developmentCycle.isEmpty()) {
-								createMessage(AppConstants.MESSAGE_2B, answerColorYellow);
+								//createMessage(AppConstants.MESSAGE_2B, answerColorYellow);
+								createMessage(AppConstants.MESSAGE_2B_APPIUM, answerColorYellow);
 							}
 						} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 							if (!developmentCycle.isEmpty()) {
-								createMessage(AppConstants.MESSAGE_1B, answerColorRed);
+								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
+								createMessage(AppConstants.MESSAGE_1B_APPIUM, answerColorRed);
+								
 							}
 						}
 					} else if (!platform.isEmpty()
@@ -168,7 +171,8 @@ public class AutomationTestMessageService implements MessageService{
 							}
 						} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 							if (!developmentCycle.isEmpty()) {
-								createMessage(AppConstants.MESSAGE_1A, answerColorRed);
+								//createMessage(AppConstants.MESSAGE_1A, answerColorRed);
+								createMessage(AppConstants.MESSAGE_2A, answerColorRed);
 							}
 						}
 					
@@ -201,6 +205,7 @@ public class AutomationTestMessageService implements MessageService{
 							}
 						} else if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
 							if(!developmentCycle.isEmpty() ) {
+								//createMessage(AppConstants.MESSAGE_6C, answerColorYellow);
 								createMessage(AppConstants.MESSAGE_6C, answerColorYellow);
 							}
 						} else if(!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
