@@ -195,7 +195,7 @@ public class AutomationTestMessageService implements MessageService{
 								//createMessage(AppConstants.MESSAGE_2B, answerColorYellow);
 								createMessage(AppConstants.MESSAGE_2B_APPIUM, answerColorYellow);
 							}
-						} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
+						} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)){
 							if (!developmentCycle.isEmpty()) {
 								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
 								createMessage(AppConstants.MESSAGE_1B_APPIUM, answerColorRed);
