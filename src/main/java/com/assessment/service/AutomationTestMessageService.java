@@ -194,7 +194,18 @@ public class AutomationTestMessageService implements MessageService{
 		}else if (!tools.isEmpty() && (tools.contains(AppConstants.QUESTION_1a_OPTION_3) || totalInformation.getQuestions().get(0).isOption7())){
 				if (!framework.isEmpty()
 						&& framework.contains(AppConstants.QUESTION_2a_OPTION_2)) {
-					if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
+					if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) && platform.contains(AppConstants.QUESTION_3a_OPTION_4))
+							&&(platform.contains(AppConstants.QUESTION_3a_OPTION_1) && platform.contains(AppConstants.QUESTION_3a_OPTION_3))) {
+						    if (!coverage.isEmpty() && ((coverage.contains(AppConstants.QUESTION_4a_OPTION_1))||(coverage.contains(AppConstants.QUESTION_4a_OPTION_2))
+						    		||(coverage.contains(AppConstants.QUESTION_4a_OPTION_3)))){
+							if (!developmentCycle.isEmpty()) {
+								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
+								createMessage(AppConstants.MESSAGE_1A, answerColorRed);
+								
+							}
+						}
+					}
+					else if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
 						if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
 							if (!developmentCycle.isEmpty()) {
 								createMessage(AppConstants.MESSAGE_4, answerColorGreen);
@@ -203,12 +214,12 @@ public class AutomationTestMessageService implements MessageService{
 								&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
 							if (!developmentCycle.isEmpty()) {
 								//createMessage(AppConstants.MESSAGE_2B, answerColorYellow);
-								createMessage(AppConstants.MESSAGE_2B_APPIUM, answerColorYellow);
+								createMessage(AppConstants.MESSAGE_1B_WebAppMob, answerColorYellow);
 							}
 						} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)){
 							if (!developmentCycle.isEmpty()) {
 								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
-								createMessage(AppConstants.MESSAGE_1B_APPIUM, answerColorRed);
+								createMessage(AppConstants.MESSAGE_1B_WebAppMob, answerColorRed);
 								
 							}
 						}
@@ -216,7 +227,7 @@ public class AutomationTestMessageService implements MessageService{
 							&& (platform.contains(AppConstants.QUESTION_3a_OPTION_1) || platform.contains(AppConstants.QUESTION_3a_OPTION_3))) {
 						if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
 							if (!developmentCycle.isEmpty()) {
-								createMessage(AppConstants.MESSAGE_3A, answerColorYellow);
+								createMessage(AppConstants.MESSAGE_2A, answerColorYellow);
 							}
 						} else if (!coverage.isEmpty()
 								&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
@@ -266,7 +277,7 @@ public class AutomationTestMessageService implements MessageService{
 						} else if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
 							if(!developmentCycle.isEmpty() ) {
 								//createMessage(AppConstants.MESSAGE_6C, answerColorYellow);
-								createMessage(AppConstants.MESSAGE_6C, answerColorYellow);
+								createMessage(AppConstants.MESSAGE_2A, answerColorYellow);
 							}
 						} else if(!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 							if(!developmentCycle.isEmpty() ) {
