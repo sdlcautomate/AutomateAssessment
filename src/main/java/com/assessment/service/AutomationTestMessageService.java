@@ -90,18 +90,31 @@ public class AutomationTestMessageService implements MessageService{
 				
 				else if(!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))){
 					if (!coverage.isEmpty()
-							&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_2) || coverage.contains(AppConstants.QUESTION_4a_OPTION_3))) {
+							&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_2) || coverage.contains(AppConstants.QUESTION_4a_OPTION_3)
+									||coverage.contains(AppConstants.QUESTION_4a_OPTION_1))) {
 						
 						if (!developmentCycle.isEmpty()) {
 							createMessage(AppConstants.MESSAGE_1D_BOTH, answerColorRed);
 						}
 					}
+					
 				}
 			}
 			
 			else if (!framework.isEmpty()
 					&& framework.contains(AppConstants.QUESTION_2a_OPTION_2)) {
-				if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
+				
+				if (!platform.isEmpty() && ((platform.contains(AppConstants.QUESTION_3a_OPTION_1) && platform.contains(AppConstants.QUESTION_3a_OPTION_2))
+						&& (platform.contains(AppConstants.QUESTION_3a_OPTION_3) && platform.contains(AppConstants.QUESTION_3a_OPTION_4)))) {
+					if (!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_1)||coverage.contains(AppConstants.QUESTION_4a_OPTION_2)||
+							coverage.contains(AppConstants.QUESTION_4a_OPTION_3))) {
+						if (!developmentCycle.isEmpty()) {							
+							createMessage(AppConstants.MESSAGE_1D, answerColorRed);						
+						}
+					}
+					
+				}
+				else if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
 					if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
 						if (!developmentCycle.isEmpty()) {							
 							createMessage(AppConstants.MESSAGE_4, answerColorGreen);						
@@ -113,7 +126,8 @@ public class AutomationTestMessageService implements MessageService{
 						}
 					} else if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_1)) {
 						if (!developmentCycle.isEmpty()) {
-							createMessage(AppConstants.MESSAGE_1D, answerColorRed);
+							
+							createMessage(AppConstants.MESSAGE_1D_REC_WEBMOB, answerColorRed);
 						}
 					}
 				} else if (!platform.isEmpty()
