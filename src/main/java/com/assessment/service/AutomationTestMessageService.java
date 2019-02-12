@@ -73,6 +73,13 @@ public class AutomationTestMessageService implements MessageService{
 							createMessage(AppConstants.MESSAGE_1C_ALL, answerColorRed);
 						}
 					}
+					else if (!coverage.isEmpty()
+							&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_4))) {
+						
+						if (!developmentCycle.isEmpty()) {
+							createMessage(AppConstants.MESSAGE_4, answerColorGreen);
+						}
+					}
 				}
 				
 			  else if (!platform.isEmpty()
@@ -97,7 +104,13 @@ public class AutomationTestMessageService implements MessageService{
 							createMessage(AppConstants.MESSAGE_1D_BOTH, answerColorRed);
 						}
 					}
-					
+					else if (!coverage.isEmpty()
+							&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_4))) {
+						
+						if (!developmentCycle.isEmpty()) {
+							createMessage(AppConstants.MESSAGE_4, answerColorGreen);
+						}
+					}
 				}
 			}
 			
@@ -110,6 +123,12 @@ public class AutomationTestMessageService implements MessageService{
 							coverage.contains(AppConstants.QUESTION_4a_OPTION_3))) {
 						if (!developmentCycle.isEmpty()) {							
 							createMessage(AppConstants.MESSAGE_1D, answerColorRed);						
+						}
+					}
+					
+					else if (!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_4))) {
+						if (!developmentCycle.isEmpty()) {							
+							createMessage(AppConstants.MESSAGE_4, answerColorGreen);						
 						}
 					}
 					
@@ -218,6 +237,13 @@ public class AutomationTestMessageService implements MessageService{
 								
 							}
 						}
+						    else if (!coverage.isEmpty() && ((coverage.contains(AppConstants.QUESTION_4a_OPTION_4)))){
+							if (!developmentCycle.isEmpty()) {
+								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
+								createMessage(AppConstants.MESSAGE_4, answerColorGreen);
+								
+							}
+						}
 					}
 					else if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) || platform.contains(AppConstants.QUESTION_3a_OPTION_4))) {
 						if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
@@ -241,7 +267,7 @@ public class AutomationTestMessageService implements MessageService{
 							&& (platform.contains(AppConstants.QUESTION_3a_OPTION_1) || platform.contains(AppConstants.QUESTION_3a_OPTION_3))) {
 						if (!coverage.isEmpty() && coverage.contains(AppConstants.QUESTION_4a_OPTION_4)) {
 							if (!developmentCycle.isEmpty()) {
-								createMessage(AppConstants.MESSAGE_2A, answerColorYellow);
+								createMessage(AppConstants.MESSAGE_3A, answerColorYellow);
 							}
 						} else if (!coverage.isEmpty()
 								&& (coverage.contains(AppConstants.QUESTION_4a_OPTION_3) || coverage.contains(AppConstants.QUESTION_4a_OPTION_2))) {
