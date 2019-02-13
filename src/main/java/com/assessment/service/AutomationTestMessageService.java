@@ -229,15 +229,11 @@ public class AutomationTestMessageService implements MessageService{
 						&& framework.contains(AppConstants.QUESTION_2a_OPTION_2)) {
 					if (!platform.isEmpty() && (platform.contains(AppConstants.QUESTION_3a_OPTION_2) && platform.contains(AppConstants.QUESTION_3a_OPTION_4))
 							&&(platform.contains(AppConstants.QUESTION_3a_OPTION_1) && platform.contains(AppConstants.QUESTION_3a_OPTION_3))) {
-						    if (!coverage.isEmpty() && ((coverage.contains(AppConstants.QUESTION_4a_OPTION_1))||(coverage.contains(AppConstants.QUESTION_4a_OPTION_2))
-						    		||(coverage.contains(AppConstants.QUESTION_4a_OPTION_3)))){
-							if (!developmentCycle.isEmpty()) {
-								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
-								createMessage(AppConstants.MESSAGE_1A, answerColorRed);
-								
-							}
-						}
-						    else if (!coverage.isEmpty() && ((coverage.contains(AppConstants.QUESTION_4a_OPTION_4)))){
+					   if(!coverage.isEmpty() && (coverage.contains(AppConstants.QUESTION_4a_OPTION_1)||coverage.contains(AppConstants.QUESTION_4a_OPTION_2)
+							   ||coverage.contains(AppConstants.QUESTION_4a_OPTION_3))) {						   						   
+						   createMessage(AppConstants.MESSAGE_2A_REC_PLAY_ALL, answerColorYellow);
+					   }
+						else if (!coverage.isEmpty() && ((coverage.contains(AppConstants.QUESTION_4a_OPTION_4)))){
 							if (!developmentCycle.isEmpty()) {
 								//createMessage(AppConstants.MESSAGE_1B, answerColorRed);
 								createMessage(AppConstants.MESSAGE_4, answerColorGreen);
